@@ -11,12 +11,19 @@ function railsapp {
 
 # misc
 alias reload='. ~/.bash_profile'
+alias md=mkdir
+
+#manpages
+pman() { 
+  man -t "${1}" | open -f -a /Applications/Preview.app/ 
+}
+
 
 # cd
 alias ..='cd ..'
  
 # ls
-alias ls="ls -F"
+alias ls="ls -aAlF"
 alias l="ls -lAh"
 alias ll="ls -l"
 alias la='ls -A'
