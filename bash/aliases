@@ -1,5 +1,6 @@
 # changing directory to code project
-function c { cd ~/code/$1; }
+function c  { cd ~/code/$1; }
+function az { cd ~/code/sites/aziko; }
 
 # alternative to "rails" command to use templates
 function railsapp {
@@ -12,10 +13,17 @@ function railsapp {
 # misc
 alias reload='. ~/.bash_profile'
 alias md=mkdir
+alias sass='pbpaste | css2sass | pbcopy'
+alias tohaml='pbpaste | html2haml | pbcopy'
+alias http='python -m SimpleHTTPServer'
 
 #manpages
 pman() { 
   man -t "${1}" | open -f -a /Applications/Preview.app/ 
+}
+
+function pless {
+  pygmentize $1 | less -r
 }
 
 
@@ -23,7 +31,8 @@ pman() {
 alias ..='cd ..'
  
 # ls
-alias ls="ls -aAlF"
+alias ls='ls -al'
+#alias ls="ls -aAlF"
 alias l="ls -lAh"
 alias ll="ls -l"
 alias la='ls -A'
@@ -48,6 +57,18 @@ alias tlog='tail -f log/development.log'
 alias scaffold='script/generate nifty_scaffold'
 alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
- 
+
+# mysql
+alias mysqlstart='/usr/local/Cellar/mysql/5.1.44/share/mysql/mysql.server start'
+alias mysqlstop='/usr/local/Cellar/mysql/5.1.44/share/mysql/mysql.server stop'
+# Automatically load on login with:
+# launchctl load -w /usr/local/Cellar/mysql/5.1.44/com.mysql.mysqld.plist
+
+#ssh
+alias manila='ssh manila.dreamhost.com'
+
+#instant web server
+alias webserve='python -m SimpleHTTPServer'
+
 # commands starting with % for pasting from web
 alias %=' '

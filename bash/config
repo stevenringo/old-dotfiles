@@ -1,7 +1,13 @@
 bind '"\t":menu-complete'
 export EDITOR="mate -w"
-export PS1="\[\e[32;1m\]\u\[\e[0m\]\[\e[32m\]@\h\[\e[36m\]\w \[\e[33m\]\$ \[\e[0m\]"  
+#standard prompt
+export PS1="\[\e[32;1m\]\u\[\e[0m\]\[\e[32m\]@\h\[\e[36m\]\w\[\e[33m\]"
+
+# add rvm support
+export PS1="\$(~/.rvm/bin/rvm-prompt v g) $PS1"
+
 # git show current path
-if [ "\$(type -t __git_ps1)" ]; then
-   export PS1="\[\e[32;1m\]\u\[\e[0m\]\[\e[32m\]@\h\[\e[36m\]\w \[\e[33m\]\$(__git_ps1 '(%s)')\$\[\e[0m\] "
-fi
+export PS1="$PS1\$(__git_ps1 '(%s)')"
+
+# add the noepie
+export PS1="$PS1\[\e[0m\] » "

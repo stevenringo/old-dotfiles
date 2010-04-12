@@ -17,6 +17,7 @@
 	pretty = %C(yellow)%h%Creset %s
 [status]
 	showUntrackedFiles = all
-#[diff]
-#	external = /usr/local/bin/araxisgitdiff
-#	renames = true
+	
+[diff]
+	tool = opendiff
+	prompt = no
