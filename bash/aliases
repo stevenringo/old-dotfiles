@@ -13,7 +13,10 @@ function railsapp {
 # misc
 alias reload='. ~/.bash_profile'
 alias md=mkdir
-alias sass='pbpaste | css2sass | pbcopy'
+alias tosass='pbpaste | sass-convert | pbcopy'
+alias toscss='pbpaste | sass-convert -Fcss -Tscss | pbcopy'
+alias sasstoscss='pbpaste | sass-convert -Fsass -Tscss | pbcopy'
+alias scsstosass='pbpaste | sass-convert -Fscss -Tsass | pbcopy'
 alias tohaml='pbpaste | html2haml | pbcopy'
 alias http='python -m SimpleHTTPServer'
 
@@ -42,11 +45,15 @@ alias gl='git pull'
 alias gp='git push'
 alias gd='git diff'
 alias gc='git commit'
+alias gcm='git commit -m'
 alias gca='git commit -a'
 alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias g="git status"
+alias ga="git add"
+alias gaa="git add ."
  
 # rails
 alias sc='script/console'
