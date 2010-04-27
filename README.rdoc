@@ -1,7 +1,6 @@
-= Ryan Bates Dot Files
+= Steven Ringo's dotfiles
 
-These are config files to set up a system the way I like it.
-
+(credit to Ryan Bates, on whose dotfiles this is based)
 
 == Installation
 
