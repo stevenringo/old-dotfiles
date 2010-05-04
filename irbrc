@@ -1,4 +1,5 @@
 #!/usr/bin/ruby
+puts "irbrc loading..."
 require 'irb/completion'
 require 'irb/ext/save-history'
 
@@ -7,12 +8,14 @@ IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
-%w[rubygems looksee/shortcuts wirble].each do |gem|
+%w[rubygems wirble hirb ap].each do |gem|
   begin
     require gem
-  rescue LoadError
   end
 end
+Wirble.init
+Wirble.colorize
+Hirb.enable
 
 class Object
   # list methods which aren't in superclass
@@ -51,5 +54,4 @@ def paste
   `pbpaste`
 end
 
-require 'ap'
 load File.dirname(__FILE__) + '/.railsrc' if $0 == 'irb' && ENV['RAILS_ENV']

@@ -5,6 +5,10 @@
 	fontdiff = -family Inconsolata -size 14 -weight normal -slant roman -underline 0 -overstrike 0
 [alias]
 	co = checkout
+	a = add
+	c = commit
+	cm = commit -m
+	s = status
 [color]
 	diff = auto
 	status = auto

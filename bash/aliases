@@ -1,6 +1,9 @@
 # changing directory to code project
 function c  { cd ~/code/$1; }
 function az { cd ~/code/sites/aziko; }
+function niftyscaffold {
+	rails g nifty:scaffold $* --testunit --haml
+}
 
 # alternative to "rails" command to use templates
 function railsapp {
@@ -35,7 +38,6 @@ alias ..='cd ..'
  
 # ls
 alias ls='ls -al'
-#alias ls="ls -aAlF"
 alias l="ls -lAh"
 alias ll="ls -l"
 alias la='ls -A'
@@ -51,15 +53,16 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status'
 alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
-alias g="git status"
+alias gs="git status"
 alias ga="git add"
 alias gaa="git add ."
- 
+alias g='git'
+
 # rails
 alias sc='script/console'
 alias ss='script/server'
 alias sg='script/generate'
-alias a='autotest -rails'
+alias srv='rails server'
 alias tlog='tail -f log/development.log'
 alias scaffold='script/generate nifty_scaffold'
 alias migrate='rake db:migrate db:test:clone'
