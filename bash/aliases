@@ -82,3 +82,6 @@ alias webserve='python -m SimpleHTTPServer'
 
 # commands starting with % for pasting from web
 alias %=' '
+
+# annotate models (rails)
+alias annotate='annotate -pbefore'

@@ -21,7 +21,5 @@
 	pretty = %C(yellow)%h%Creset %s
 [status]
 	showUntrackedFiles = all
-	
-[diff]
-	tool = opendiff
-	prompt = no
+[difftool "Kaleidoscope"]
+	cmd = ksdiff-wrapper git \"$REMOTE\" \"$LOCAL\"
