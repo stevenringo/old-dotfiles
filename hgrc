@@ -1,11 +1,11 @@
 [ui]
 username=steven <mercurial@stevenringo.com>
 
+[merge-tools]
+kdiff3.args = $base $local $other -o $output
+
 [extensions]
 hgext.extdiff =
 
 [extdiff]
-cmd.kdiff3 =
-
-[merge-tools]
-kdiff3.args = $base $local $other -o $output
+cmd.opendiff = fmdiff

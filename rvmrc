@@ -56,4 +56,4 @@
 rvm_archflags="-arch x86_64"
 
 # To enable switching to default / system when leaving a directory set
-# rvm_project_rvmrc_default=1
+rvm_project_rvmrc_default=1

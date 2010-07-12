@@ -69,6 +69,9 @@ alias scaffold='script/generate nifty_scaffold'
 alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
 
+#rails 3
+alias r='rails'
+
 # mysql
 alias mysqlstart='/usr/local/Cellar/mysql/5.1.44/share/mysql/mysql.server start'
 alias mysqlstop='/usr/local/Cellar/mysql/5.1.44/share/mysql/mysql.server stop'
@@ -86,3 +89,4 @@ alias %=' '
 
 # annotate models (rails)
 alias annotate='annotate -pbefore'
+
