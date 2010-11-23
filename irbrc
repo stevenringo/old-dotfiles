@@ -11,8 +11,11 @@ IRB.conf[:PROMPT_MODE] = :SIMPLE
 %w[rubygems wirble hirb ap].each do |gem|
   begin
     require gem
+  rescue LoadError => err
+    $stderr.puts "Couldn't load #{gem}: #{err}"
   end
 end
+
 Wirble.init
 Wirble.colorize
 Hirb.enable

@@ -78,6 +78,10 @@ alias mysqlstop='/usr/local/Cellar/mysql/5.1.44/share/mysql/mysql.server stop'
 # Automatically load on login with:
 # launchctl load -w /usr/local/Cellar/mysql/5.1.44/com.mysql.mysqld.plist
 
+#postgres
+alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+
 #ssh
 alias manila='ssh manila.dreamhost.com'
 
