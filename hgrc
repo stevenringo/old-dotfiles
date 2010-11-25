@@ -1,11 +1,21 @@
 [ui]
 username=steven <mercurial@stevenringo.com>
 
-[merge-tools]
-kdiff3.args = $base $local $other -o $output
-
 [extensions]
-hgext.extdiff =
+extdiff =
+eol =
+purge =
+bookmarks =
+graphlog = 
 
 [extdiff]
-cmd.opendiff = fmdiff
+cmd.arxdiff = /usr/local/bin/compare
+opts.arxdiff = -2 -wait
+
+[merge-tools]
+araxismergetool.premerge = True
+araxismergetool.args = $other $base $local $output
+araxismergetool.executable = /usr/local/bin/araxishgmerge
+araxismergetool.checkconflict = True
+araxismergetool.binary = True
+araxismergetool.gui =  True
