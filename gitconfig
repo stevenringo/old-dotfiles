@@ -15,13 +15,15 @@
   branch = auto
 [core]
   editor = mate -w
+	autocrlf = input
+	safecrlf = true
 [apply]
   whitespace = nowarn
 [format]
   pretty = %C(yellow)%h%Creset %s
 [status]
   showUntrackedFiles = all
-[diff] 
-  tool = araxis
-[merge] 
-  tool = araxis
+[diff]
+  tool = xompare
+[difftool "xompare"]
+  cmd = /Applications/Compare.app/Contents/MacOS/Compare $LOCAL $REMOTE

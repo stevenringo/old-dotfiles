@@ -2,20 +2,17 @@
 username=steven <mercurial@stevenringo.com>
 
 [extensions]
-extdiff =
+hgext.extdiff =
 eol =
 purge =
 bookmarks =
 graphlog = 
 
 [extdiff]
-cmd.arxdiff = /usr/local/bin/compare
-opts.arxdiff = -2 -wait
+cmd.kdiff3 =
 
 [merge-tools]
-araxismergetool.premerge = True
-araxismergetool.args = $other $base $local $output
-araxismergetool.executable = /usr/local/bin/araxishgmerge
-araxismergetool.checkconflict = True
-araxismergetool.binary = True
-araxismergetool.gui =  True
+kdiff3.args = $base $local $other -o $output
+
+[eol]
+only-consistent = False
