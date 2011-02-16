@@ -93,4 +93,3 @@ alias %=' '
 
 # annotate models (rails)
 alias annotate='annotate -pbefore'
-

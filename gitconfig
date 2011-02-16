@@ -1,28 +1,28 @@
 [user]
-  name = Steven Ringo
-  email = git@stevenringo.com
+	name = Steven Ringo
+	email = git@stevenringo.com
 [gui]
-  fontdiff = -family Inconsolata -size 14 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family Inconsolata -size 14 -weight normal -slant roman -underline 0 -overstrike 0
 [alias]
-  co = checkout
-  a = add
-  c = commit
-  cm = commit -m
-  s = status
+	co = checkout
+	a = add
+	c = commit
+	cm = commit -m
+	s = status
 [color]
-  diff = auto
-  status = auto
-  branch = auto
+	diff = auto
+	status = auto
+	branch = auto
 [core]
-  editor = mate -w
+	editor = mate -w
 	autocrlf = input
 	safecrlf = true
 [apply]
-  whitespace = nowarn
+	whitespace = nowarn
 [format]
-  pretty = %C(yellow)%h%Creset %s
+	pretty = %C(yellow)%h%Creset %s
 [status]
-  showUntrackedFiles = all
+	showUntrackedFiles = all
 [diff]
   tool = xompare
 [difftool "xompare"]
