@@ -5,6 +5,10 @@ function niftyscaffold {
 	rails g nifty:scaffold $* --testunit --haml
 }
 
+function rubyapp {
+  mkdir $1 && cd $1 && git init . && rvm use 1.9.2@$1 --rvmrc
+}
+
 # alternative to "rails" command to use templates
 function railsapp {
   template=$1
