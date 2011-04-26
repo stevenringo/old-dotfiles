@@ -1,9 +1,9 @@
 # This will run for .bash_profile AND .bashrc, as we call this from .bashrc
 
-source ~/.bash/aliases
-source ~/.bash/completions
-source ~/.bash/paths
-source ~/.bash/config
+source ~/.dotfiles/bash/aliases
+source ~/.dotfiles/bash/completions
+source ~/.dotfiles/bash/paths
+source ~/.dotfiles/bash/config
 
 if [[ -f ~/.localrc ]]; then
   source ~/.localrc

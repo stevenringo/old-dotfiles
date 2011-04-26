@@ -7,6 +7,10 @@ function niftyscaffold {
 
 function rubyapp {
   mkdir $1 && cd $1 && git init . && rvm use 1.9.2@$1 --rvmrc
+  echo "source \"http://rubygems.org\"" > Gemfile
+  echo "gem 'rails', '3.0.4'" >> Gemfile
+  gem install bundler
+  bundle
 }
 
 # alternative to "rails" command to use templates
